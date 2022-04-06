@@ -7,9 +7,9 @@ class FlutterAppBadger {
   static const MethodChannel _channel = const MethodChannel('g123k/flutter_app_badger');
 
   /// only Android
-  static void initConfig() {
+  static Future<void> initConfig() async {
     if (Platform.isAndroid) {
-      _channel.invokeMethod('initConfig');
+      await _channel.invokeMethod('initConfig');
     }
   }
 
