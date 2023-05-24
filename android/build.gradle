@@ -4,7 +4,7 @@ version '1.0-SNAPSHOT'
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -15,14 +15,14 @@ buildscript {
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 33
 
     defaultConfig {
         minSdkVersion 16
@@ -33,8 +33,15 @@ android {
     }
 }
 
+//configurations.maybeCreate("badger")
+//artifacts.add("badger", file('lib/ShortcutBadger.aar'))
+
 dependencies {
     //noinspection GradleDependency
+    // 初始化 是代码块，导致隐私问题
 //    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
-    implementation files('lib/ShortcutBadger.aar')
+//    implementation files('lib/ShortcutBadger.aar')
+     compileOnly files('lib/ShortcutBadger.aar')
+//    implementation fileTree(dir: 'lib', include: ['*.jar','*.aar'])
+
 }
