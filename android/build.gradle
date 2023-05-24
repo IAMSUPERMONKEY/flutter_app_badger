@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.2'
+        classpath 'com.android.tools.build:gradle:7.4.2'
     }
 }
 
@@ -41,7 +41,9 @@ dependencies {
     // 初始化 是代码块，导致隐私问题
 //    implementation "me.leolin:ShortcutBadger:1.1.22@aar"
 //    implementation files('lib/ShortcutBadger.aar')
-     compileOnly files('lib/ShortcutBadger.aar')
+//     compileOnly files('lib/ShortcutBadger.aar')
 //    implementation fileTree(dir: 'lib', include: ['*.jar','*.aar'])
+
+    implementation project(':LocalRepo:badger')
 
 }
