@@ -1,3 +1,1 @@
 rootProject.name = 'flutter_app_badger'
-
-include ':LocalRepo:badger'

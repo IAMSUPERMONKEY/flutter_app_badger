@@ -33,9 +33,6 @@ android {
     }
 }
 
-//configurations.maybeCreate("badger")
-//artifacts.add("badger", file('lib/ShortcutBadger.aar'))
-
 dependencies {
     //noinspection GradleDependency
     // 初始化 是代码块，导致隐私问题
@@ -43,7 +40,5 @@ dependencies {
 //    implementation files('lib/ShortcutBadger.aar')
 //     compileOnly files('lib/ShortcutBadger.aar')
 //    implementation fileTree(dir: 'lib', include: ['*.jar','*.aar'])
-
-    implementation project(':LocalRepo:badger')
 
 }
